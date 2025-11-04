@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-Imagens 8" />
+    <!-- [IMPORTANTE] Script de Consentimento - Configurado para "Acesso Total" -->
+    <!-- Este script está pronto para funcionar com as NOVAS tags que adicionar -->
+    <script>
+      // Define o estado de consentimento padrão como 'CONCEDIDO' para todos os tipos
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    </script>
+
+    <!-- 
+      ADICIONE AS SUAS NOVAS TAGS DO GOOGLE (GTM ou gtag.js) AQUI 
+    -->
+
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="DSR VET - Fale conosco pelo WhatsApp." />
     <title>DSR VET - Agende seu Atendimento</title>
@@ -20,8 +38,7 @@
       }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        /* Imagem de fundo para um visual profissional */
-        background: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+        background: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto-format&fit=crop&w=1920&q=80') no-repeat center center fixed;
         background-size: cover;
       }
       .container {
@@ -30,7 +47,6 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
-        /* Sobreposição para facilitar a leitura */
         background-color: rgba(255, 255, 255, 0.7);
         padding: 2rem;
         text-align: center;
@@ -42,7 +58,6 @@
         margin-bottom: 3rem;
       }
       
-      /* Animação de pulsação para o botão */
       @keyframes pulse {
         0% {
           transform: scale(1);
@@ -58,7 +73,6 @@
         }
       }
 
-      /* Botão principal do WhatsApp */
       .whatsapp-button {
         display: inline-flex;
         align-items: center;
@@ -68,32 +82,34 @@
         color: #fff;
         text-decoration: none;
         border-radius: 50px;
-        font-size: 1.5rem; /* Fonte maior para destaque */
+        font-size: 1.5rem;
         font-weight: 700;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease;
         animation: pulse 2s infinite;
       }
       .whatsapp-button i {
-        font-size: 2rem; /* Ícone maior */
+        font-size: 2rem;
         margin-right: 1rem;
       }
       .whatsapp-button:hover {
         transform: scale(1.05);
-        animation-play-state: paused; /* Pausa a animação ao passar o mouse */
+        animation-play-state: paused;
       }
     </style>
 </head>
 <body>
+    <!-- Tags <noscript> removidas -->
+
     <div class="container">
-        <!-- Logo da Clínica -->
         <img src="https://i.postimg.cc/x1kjf69j/logo-dsrvet-transparente.png" alt="Logo DSR VET" class="logo" />
         
-        <!-- Botão de Ação do WhatsApp -->
-        <a href="https://wa.me/5561994379597?text=ola%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+        <a href="https://wa.me/5561994379597?text=ola%2C%20vim%20do%20site%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer" class="whatsapp-button" id="whatsapp-button-main">
             <i class="fab fa-whatsapp"></i>
             Agende seu Atendimento
         </a>
     </div>
+
+    <!-- O script de rastreamento de clique foi removido, pois dependia do GTM -->
 </body>
 </html>
